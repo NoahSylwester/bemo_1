@@ -47,8 +47,17 @@ return function($kirby, $pages, $page) {
                 //         'sender' => esc($data['name'])
                 //     ]
                 // ]);
-                if ($body = esc($data['text']) . "from" . esc($data['name'])) {
-                    mail("noahsylwester@gmail.com","form submission","hello");
+                if ($body = esc($data['text']) . "from" . esc($data['name']) and $siteemail = esc($page->email())) {
+                    require 'vendor/autoload.php';
+                    $sendgrid = new SendGrid("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");
+                    $email    = new SendGrid\Email();
+                    
+                    $email->addTo($siteemail)
+                          ->setFrom("no-reply@form.submit")
+                          ->setSubject("Form submission")
+                          ->setHtml($body);
+                    
+                    $sendgrid->send($email);
                 }
             } catch (Exception $error) {
                 $alert['error'] = "The form could not be sent";

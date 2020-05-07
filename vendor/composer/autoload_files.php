@@ -10,4 +10,7 @@ return array(
     '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
     '04c6c5c2f7095ccf6c481d3e53e1776f' => $vendorDir . '/mustangostang/spyc/Spyc.php',
     'f864ae44e8154e5ff6f4eec32f46d37f' => $baseDir . '/kirby/config/setup.php',
+    'fe81f4db7ca976f7e113f097866cf957' => $vendorDir . '/sendgrid/sendgrid/lib/BaseInterface.php',
+    '3f8bdd3b35094c73a26f0106e3c0f8b2' => $vendorDir . '/sendgrid/sendgrid/lib/SendGrid.php',
+    '0596c9fb5a9dba3cf8abc2fdaa05141c' => $vendorDir . '/sendgrid/sendgrid/lib/TwilioEmail.php',
 );
