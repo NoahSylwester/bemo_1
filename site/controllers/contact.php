@@ -50,7 +50,7 @@ return function($kirby, $pages, $page) {
                 if ($body = esc($data['text']) . "from" . esc($data['name']) and $siteemail = esc($page->email())) {
                     require 'vendor/autoload.php';
                     $sendgrid = new SendGrid("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");
-                    $email    = new SendGrid\Email();
+                    $email    = new SendGrid\Mail\Mail();
                     
                     $email->addTo($siteemail)
                           ->setFrom("no-reply@form.submit")
