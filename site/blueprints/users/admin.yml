@@ -1,0 +1,5 @@
+title: Admin
+permissions:
+  access:
+    panel: true
+    site: true

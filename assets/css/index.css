@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+#login-page, #login-page form, #login-page div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#login-page input {
+    background-color: lightgray;
+    padding: 8px;
+    margin: 3px;
+    display: block;
+}
+.page {
+    width: 100%;
+    font:  normal 14px/22px Arial, Helvetica, Geneva, sans-serif;
+}
+.menu {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 0 30px;
+    transition: 0.5s;
+}
+.scrolled-menu {
+    background-color: rgba(256,256,256,0.7);
+}
+.nav-link {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+    text-align: center;
+    position: relative;
+}
+.nav-link:hover:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -20px;
+    width: 40px;
+    height: 1px;
+    background-color: black;
+}
+.nav-links {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 40%;
+    right: 100px;
+}
+.banner {
+    position: relative;
+    z-index: -1;
+    font:  normal 14px/22px Arial, Helvetica, Geneva, sans-serif;
+}
+#banner-title {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    position: absolute;
+    letter-spacing: 5px;
+    line-height: 1em;
+    top: 50%;
+}
+#banner-title div {
+    width: 60%;
+    margin: 10px auto 0 auto;
+    display: block; 
+    height: 1px;
+    padding-bottom: 12px;
+   	border-bottom: 2px solid;
+}
+.banner img {
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+    z-index: -1;
+}
+.padding {
+    padding: 3.5%;
+    text-align: center;
+}
+.footer {
+    background-color: midnightblue;
+    padding: 23px 50px 23px 50px;
+    font-size: 0.9rem;
+}
+.footer-text {
+    color: white !important;
+}
+.footer-link {
+    color: rgb(255, 81, 0);
+}
+.contact-banner {
+    width: 100%;
+    object-fit: cover;
+}
+.honeypot {
+    position: absolute;
+    left: -9999px;
+}
+.message-text {
+    text-align: left;
+}
+.contact-input {
+    background-color: lightgray;
+    padding: 8px;
+    width: 80%;
+    margin: 10px 0 15px 0;
+}
+.form-button {
+    background-color: darkgray;
+    padding: 8px;
+    width: 100px;
+    transition: 0.5s;
+    cursor: pointer;
+    color: midnightblue;
+    margin-bottom: 100px;
+}
+.form-button:hover {
+    background-color: white;
+}
+.text {
+    text-align: left;
+    font-size: 1.1rem;
+}
+.text {
+    line-height: 1.5em;
+  }
+.text p,
+.text figure,
+.text ul,
+.text ol {
+    margin-bottom: 1.5em;
+}
+.text h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.text > *:first-child {
+    margin-top: 0;
+}
+.text a {
+    position: relative;
+    white-space: nowrap;
+    font-weight: 500;
+    z-index: 1;
+    display: inline-block;
+    border-bottom: 2px solid #000;
+}
+.text figure {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.text img {
+    width: 100%;
+}
+
+#up-arrow {
+    display: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.show-arrow {
+    display: block !important;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+.nav-links .icon {
+    display: none;
+}
+  
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the nav-links (.icon) */
+@media screen and (max-width: 900px) {
+    .nav-links a {display: none;}
+    .nav-links a.icon {
+      color: black;
+      position: fixed;
+      top: 30px;
+      right: 30px;
+      font-size: 1.5em;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the nav-links with JavaScript when the user clicks on the icon. This class makes the nav-links look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 900px) {
+    .menu.responsive{
+        background-color: rgba(256,256,256,0.7);
+    }
+    .nav-links.responsive {
+        position: relative;
+        width: 100%;
+        padding-top: 50px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links.responsive .nav-link {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }

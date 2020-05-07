@@ -1,0 +1,29 @@
+title: Site
+# preset: pages
+# unlisted: false
+columns:
+  left:
+    width: 1/4
+    sections:
+      pages:
+        type: pages
+        layout: cards
+        status: listed
+  right:
+    width: 3/4
+    sections:
+      files:
+        type: files
+        label: Site Brand Image
+      tags:
+        type: fields
+        fields:
+          metatitle:
+            type: text
+            label: Site Metatitle
+          google:
+            type: text
+            label: Google Analytics Script Tag
+          facebook:
+            type: text
+            label: Facebook Advertising Pixel
