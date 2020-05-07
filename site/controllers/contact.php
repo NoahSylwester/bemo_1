@@ -47,9 +47,7 @@ return function($kirby, $pages, $page) {
                         'sender' => esc($data['name'])
                     ]
                 ]);
-
             } catch (Exception $error) {
-                echo $error;
                 $alert['error'] = "The form could not be sent";
             }
 
