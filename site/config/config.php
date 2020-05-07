@@ -15,7 +15,7 @@ return [
     'email' => [
         'transport' => [
           'type' => 'smtp',
-          'host' => 'smtp.company.com',
+          'host' => 'smtp.sendgrid.net',
           'port' => 465,
           'security' => 'ssl',
           'auth' => true,

@@ -36,34 +36,34 @@ return function($kirby, $pages, $page) {
             // the data is fine, let's send the email
         } else {
             try {
-                // $kirby->email([
-                //     'template' => 'email',
-                //     'from'     => 'contactform@sample.com',
-                //     'replyTo'  => $data['email'],
-                //     'to'       => esc($page->email()),
-                //     'subject'  => esc($data['name']) . ' sent you a message from your contact form',
-                //     'data'     => [
-                //         'text'   => esc($data['text']),
-                //         'sender' => esc($data['name'])
-                //     ]
-                // ]);
-                if ($body = esc($data['text']) . "from" . esc($data['name']) and $siteemail = esc($page->email())) {
-                    require 'vendor/autoload.php';
-                    $email = new \SendGrid\Mail\Mail();
-                    $email->setFrom("no-reply@submit.form", "Contact Form");
-                    $email->setSubject("Form Submission");
-                    $email->addTo($siteemail, "Owner");
-                    $email->addContent("ihvkfhbvdk");
-                    $sendgrid = new \SendGrid('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');
-                    try {
-                        $response = $sendgrid->send($email);
-                        print $response->statusCode() . "\n";
-                        print_r($response->headers());
-                        print $response->body() . "\n";
-                    } catch (Exception $e) {
-                        echo 'Caught exception: ',  $e->getMessage(), "\n";
-                    }
-                }
+                $kirby->email([
+                    'template' => 'email',
+                    'from'     => 'contactform@sample.com',
+                    'replyTo'  => $data['email'],
+                    'to'       => esc($page->email()),
+                    'subject'  => esc($data['name']) . ' sent you a message from your contact form',
+                    'data'     => [
+                        'text'   => esc($data['text']),
+                        'sender' => esc($data['name'])
+                    ]
+                ]);
+                // if ($body = esc($data['text']) . "from" . esc($data['name']) and $siteemail = esc($page->email())) {
+                //     require 'vendor/autoload.php';
+                //     $email = new \SendGrid\Mail\Mail();
+                //     $email->setFrom("no-reply@submit.form", "Contact Form");
+                //     $email->setSubject("Form Submission");
+                //     $email->addTo($siteemail, "Owner");
+                //     $email->addContent("ihvkfhbvdk");
+                //     $sendgrid = new \SendGrid('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');
+                //     try {
+                //         $response = $sendgrid->send($email);
+                //         print $response->statusCode() . "\n";
+                //         print_r($response->headers());
+                //         print $response->body() . "\n";
+                //     } catch (Exception $e) {
+                //         echo 'Caught exception: ',  $e->getMessage(), "\n";
+                //     }
+                // }
             } catch (Exception $error) {
                 $alert['error'] = "The form could not be sent";
             }
