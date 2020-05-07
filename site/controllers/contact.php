@@ -65,6 +65,7 @@ return function($kirby, $pages, $page) {
                 //     }
                 // }
             } catch (Exception $error) {
+                echo $error;
                 $alert['error'] = "The form could not be sent";
             }
 
