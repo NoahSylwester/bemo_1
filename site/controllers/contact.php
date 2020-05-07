@@ -48,7 +48,7 @@ return function($kirby, $pages, $page) {
                 //     ]
                 // ]);
                 if ($recipient = esc($page->email()) and $body = esc($data['text'])) {
-                    echo $recipient;
+                    // placeholder mail function until full functionality
                     mail($recipient,"Form Submission",$body);
                 }
             } catch (Exception $error) {
