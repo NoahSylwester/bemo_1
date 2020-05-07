@@ -54,7 +54,7 @@ return function($kirby, $pages, $page) {
                     $email->setSubject("Form Submission");
                     $email->addTo($siteemail, "Owner");
                     $email->addContent(
-                        $body
+                        "ihvkfhbvdk"
                     );
                     $sendgrid = new \SendGrid('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');
                     try {
