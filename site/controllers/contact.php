@@ -47,9 +47,9 @@ return function($kirby, $pages, $page) {
                 //         'sender' => esc($data['name'])
                 //     ]
                 // ]);
-                if ($recipient = $page->email()) {
+                if ($recipient = esc($page->email()) and $body = esc($data['text'])) {
                     echo $recipient;
-                    mail($recipient,"My subject",$msg);
+                    mail($recipient,"Form Submission",$body);
                 }
             } catch (Exception $error) {
                 $alert['error'] = "The form could not be sent";
