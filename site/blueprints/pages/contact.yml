@@ -1,4 +1,7 @@
 title: Contact page
+files:
+  type: files
+  label: Banner image
 fields:
   metatitle:
     type: text
