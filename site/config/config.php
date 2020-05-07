@@ -12,17 +12,17 @@ return [
     'panel' => [
         'install' => true,
     ],
-    // 'email' => [
-    //     'transport' => [
-    //       'type' => 'smtp',
-    //       'host' => 'smtp.sendgrid.net',
-    //       'port' => 465,
-    //       'security' => 'ssl',
-    //       'auth' => true,
-    //       'username' => 'apikey',
-    //       'password' => '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'
-    //     ]
-    // ],
+    'email' => [
+        'transport' => [
+          'type' => 'smtp',
+          'host' => 'smtp.sendgrid.net',
+          'port' => 465,
+          'security' => 'ssl',
+          'auth' => true,
+          'username' => 'apikey',
+          'password' => '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'
+        ]
+    ],
     'routes' => [
       [
         'pattern' => 'logout',
