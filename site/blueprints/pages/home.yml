@@ -1,18 +1,19 @@
 title: Contact page
-files:
-  type: files
-  label: Banner image
-fields:
-  metatitle:
-    type: text
-  metadescription:
-    type: textarea
-    size: small
-  noindex:
-    label: No-index
-    type: toggle
-    text: Include in search engine results?
-  text:
-    label: Text
-    type: textarea
-    size: large
+sections:
+  files:
+    type: files
+    label: Banner Image
+  fields:
+    metatitle:
+      type: text
+    metadescription:
+      type: textarea
+      size: small
+    noindex:
+      label: No-index
+      type: toggle
+      text: Include in search engine results?
+    text:
+      label: Text
+      type: textarea
+      size: large

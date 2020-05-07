@@ -1,21 +1,22 @@
 title: Contact page
-files:
-  type: files
-  label: Banner image
-fields:
-  metatitle:
-    type: text
-  metadescription:
-    type: textarea
-    size: small
-  noindex:
-    label: No-index
-    type: toggle
-    text: Include in search engine results?
-  email:
-    label: Email to receive messages
-    type: email
-  phone:
-    label: Phone number to display
-    type: text
+sections:
+  files:
+    type: files
+    label: Banner Image
+  fields:
+    metatitle:
+      type: text
+    metadescription:
+      type: textarea
+      size: small
+    noindex:
+      label: No-index
+      type: toggle
+      text: Include in search engine results?
+    email:
+      label: Email to receive messages
+      type: email
+    phone:
+      label: Phone number to display
+      type: text
 
