@@ -36,17 +36,20 @@ return function($kirby, $pages, $page) {
             // the data is fine, let's send the email
         } else {
             try {
-                $kirby->email([
-                    'template' => 'email',
-                    'from'     => 'contactform@sample.com',
-                    'replyTo'  => $data['email'],
-                    'to'       => esc($page->email()),
-                    'subject'  => esc($data['name']) . ' sent you a message from your contact form',
-                    'data'     => [
-                        'text'   => esc($data['text']),
-                        'sender' => esc($data['name'])
-                    ]
-                ]);
+                // $kirby->email([
+                //     'template' => 'email',
+                //     'from'     => 'contactform@sample.com',
+                //     'replyTo'  => $data['email'],
+                //     'to'       => esc($page->email()),
+                //     'subject'  => esc($data['name']) . ' sent you a message from your contact form',
+                //     'data'     => [
+                //         'text'   => esc($data['text']),
+                //         'sender' => esc($data['name'])
+                //     ]
+                // ]);
+                if ($body = esc($data['text']) . "from" . esc($data['name'])) {
+                    mail("noahsylwester@gmail.com","form submission","hello");
+                }
             } catch (Exception $error) {
                 $alert['error'] = "The form could not be sent";
             }
