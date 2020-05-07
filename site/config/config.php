@@ -12,17 +12,17 @@ return [
     'panel' => [
         'install' => true,
     ],
-    'email' => [
-        'transport' => [
-          'type' => 'smtp',
-          'host' => 'smtp.company.com',
-          'port' => 465,
-          'security' => true,
-          'auth' => true,
-          'username' => 'apikey',
-          'password' => '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'
-        ]
-    ],
+    // 'email' => [
+    //     'transport' => [
+    //       'type' => 'smtp',
+    //       'host' => 'smtp.company.com',
+    //       'port' => 465,
+    //       'security' => true,
+    //       'auth' => true,
+    //       'username' => 'apikey',
+    //       'password' => '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'
+    //     ]
+    // ],
     'routes' => [
       [
         'pattern' => 'logout',
