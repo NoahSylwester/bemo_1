@@ -49,15 +49,22 @@ return function($kirby, $pages, $page) {
                 // ]);
                 if ($body = esc($data['text']) . "from" . esc($data['name']) and $siteemail = esc($page->email())) {
                     require 'vendor/autoload.php';
-                    $sendgrid = new SendGrid("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");
-                    $email    = new SendGrid\Mail\Mail();
-                    
-                    $email->addTo($siteemail)
-                          ->setFrom("no-reply@form.submit")
-                          ->setSubject("Form submission")
-                          ->setHtml($body);
-                    
-                    $sendgrid->send($email);
+                    $email = new \SendGrid\Mail\Mail();
+                    $email->setFrom("no-reply@submit.form", "Contact Form");
+                    $email->setSubject("Form Submission");
+                    $email->addTo($siteemail, "Owner");
+                    $email->addContent(
+                        $body
+                    );
+                    $sendgrid = new \SendGrid('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');
+                    try {
+                        $response = $sendgrid->send($email);
+                        print $response->statusCode() . "\n";
+                        print_r($response->headers());
+                        print $response->body() . "\n";
+                    } catch (Exception $e) {
+                        echo 'Caught exception: ',  $e->getMessage(), "\n";
+                    }
                 }
             } catch (Exception $error) {
                 $alert['error'] = "The form could not be sent";
