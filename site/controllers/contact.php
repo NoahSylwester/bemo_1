@@ -53,9 +53,7 @@ return function($kirby, $pages, $page) {
                     $email->setFrom("no-reply@submit.form", "Contact Form");
                     $email->setSubject("Form Submission");
                     $email->addTo($siteemail, "Owner");
-                    $email->addContent(
-                        "ihvkfhbvdk"
-                    );
+                    $email->addContent("ihvkfhbvdk");
                     $sendgrid = new \SendGrid('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');
                     try {
                         $response = $sendgrid->send($email);
