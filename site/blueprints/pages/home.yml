@@ -3,17 +3,19 @@ sections:
   files:
     type: files
     label: Banner Image
-  fields:
-    metatitle:
-      type: text
-    metadescription:
-      type: textarea
-      size: small
-    noindex:
-      label: No-index
-      type: toggle
-      text: Include in search engine results?
-    text:
-      label: Text
-      type: textarea
-      size: large
+  data:
+    type: fields
+    fields:
+      metatitle:
+        type: text
+      metadescription:
+        type: textarea
+        size: small
+      noindex:
+        label: No-index
+        type: toggle
+        text: Include in search engine results?
+      text:
+        label: Text
+        type: textarea
+        size: large
