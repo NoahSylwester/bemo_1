@@ -17,7 +17,10 @@ return [
           'type' => 'smtp',
           'host' => 'smtp.company.com',
           'port' => 465,
-          'security' => true
+          'security' => true,
+          'auth' => true,
+          'username' => 'apikey',
+          'password' => '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'
         ]
     ],
     'routes' => [
